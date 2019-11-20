@@ -1,0 +1,39 @@
+*/bin/*
+
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+
+# Eclipse
+.settings/
+*.project
+*.classpath
+.prefs
+*.prefs
+.metadata/
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# VSCode
+.vscode/
+.factorypath
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
+results/
+doc/
+/logs/
+
+# Markdown
+*.md.html

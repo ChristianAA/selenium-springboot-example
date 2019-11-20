@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                %date{"HH:mm:ss,SSS"} %-5level [%c:%line] %msg%n
+            </Pattern>
+        </encoder>
+    </appender>
+
+    <root level="warn">
+        <appender-ref ref="console" />
+    </root>
+
+    <logger name="com.example.selenium" level="debug" />
+    
+</configuration>
