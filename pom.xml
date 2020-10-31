@@ -14,15 +14,15 @@
         <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
 
-        <webdriver.version>3.7.1</webdriver.version>
-        <cucumber.version>4.7.4</cucumber.version>
+        <webdriver.version>4.2.2</webdriver.version>
+        <cucumber.version>6.8.1</cucumber.version>
 
     </properties>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.0.RELEASE</version>
+        <version>2.3.4.RELEASE</version>
         <relativePath />
     </parent>
 

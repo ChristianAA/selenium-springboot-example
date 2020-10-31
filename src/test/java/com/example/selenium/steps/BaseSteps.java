@@ -4,9 +4,9 @@ import static org.openqa.selenium.support.PageFactory.initElements;
 
 import com.example.selenium.pages.BasePage;
 import com.example.selenium.runners.Hook;
-import io.cucumber.core.api.Scenario;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;

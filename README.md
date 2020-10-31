@@ -15,6 +15,8 @@ A simple test for finding results in DuckDuckGo is used as example
 2. Open a terminal
 3. From the project root directory run:   `mvn test`
 
+By default, tests will be executed in Chrome (headless mode). Preferences can be changed in "application.properties" file
+
 # Links
     
    [Cucumber](<https://docs.cucumber.io/>)

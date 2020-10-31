@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 import javax.annotation.PostConstruct;
 
-import io.cucumber.core.api.Scenario;
+import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -86,7 +86,7 @@ public class Hook {
     public void tearDown(Scenario scenario) {
         if (scenario.isFailed()) {
             final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-            scenario.embed(screenshot, "image/png");
+            scenario.attach(screenshot, "image/png", "screenshot");
         }
     }
 
@@ -121,7 +121,7 @@ public class Hook {
     }
 
     private void setChromeDriver() {
-        WebDriverManager.chromedriver().forceCache().setup();
+        WebDriverManager.chromedriver().setup();
 
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--start-maximized");
@@ -148,7 +148,7 @@ public class Hook {
     }
 
     private void setFirefoxDriver() {
-        WebDriverManager.firefoxdriver().forceCache().setup();
+        WebDriverManager.firefoxdriver().setup();
         FirefoxOptions firefoxOptions = new FirefoxOptions();
         FirefoxBinary firefoxBinary = new FirefoxBinary();
 
