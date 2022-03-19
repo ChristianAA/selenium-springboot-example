@@ -6,7 +6,7 @@ import org.openqa.selenium.support.How;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HomePage implements BasePage {
+public class SearchPage implements BasePage {
 
     @FindBy(how = How.CSS, using = "#search_form_input_homepage")
     private WebElement searchInput;

@@ -5,7 +5,7 @@ import static org.springframework.util.ObjectUtils.isEmpty;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 
 import javax.annotation.PostConstruct;
 
@@ -116,7 +116,7 @@ public class Hook {
         }
 
         // Navigate
-        driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
         goToBaseUrl();
     }
 
@@ -144,7 +144,7 @@ public class Hook {
         } else {
             driver = new ChromeDriver(chromeOptions);
         }
-        wait = new WebDriverWait(driver, 20, 1000);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
 
     private void setFirefoxDriver() {
@@ -163,7 +163,7 @@ public class Hook {
 
         driver = new FirefoxDriver(firefoxOptions);
         driver.manage().window().maximize();
-        wait = new WebDriverWait(driver, 20, 1000);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
 
     private void goToBaseUrl() {

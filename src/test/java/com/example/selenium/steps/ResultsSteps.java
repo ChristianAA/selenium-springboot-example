@@ -9,8 +9,8 @@ public class ResultsSteps {
     @Autowired
     private ResultsPage resultsPage;
 
-    @Then("^the links are displayed on the results page$")
-    public void theLinksAreDisplayedOnTheResultsPage() {
-        resultsPage.assertLinksArea();
+    @Then("^results are displayed$")
+    public void resultsAreDisplayed() {
+        resultsPage.assertResultsArePresent();
     }
 }

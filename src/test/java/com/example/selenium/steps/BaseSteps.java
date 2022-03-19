@@ -40,10 +40,8 @@ public class BaseSteps {
     public void initializeDriver() {
         final WebDriver driver = hooks.getDriver();
 
-        // Intialize all page elements
-        pages.stream().forEach(p -> {
-            initElements(driver, p);
-        });
+        // Initialize all page elements
+        pages.forEach(p -> initElements(driver, p));
         // --
     }
 

@@ -8,12 +8,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class ResultsPage implements BasePage {
 
-    private static final String LINKS_AREA_LOCATOR = "#links";
+    private static final String RESULTS_LOCATOR = "#links [data-testid='result']";
 
     @Autowired
     private VisibilityHelper visibilityHelper;
 
-    public void assertLinksArea(){
-        visibilityHelper.waitForPresenceOf(By.cssSelector(LINKS_AREA_LOCATOR));
+
+    public void assertResultsArePresent(){
+        visibilityHelper.waitForPresenceOf(By.cssSelector(RESULTS_LOCATOR));
     }
 }

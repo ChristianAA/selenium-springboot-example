@@ -5,7 +5,7 @@
 
     <groupId>com.example.selenium</groupId>
     <artifactId>selenium-springboot-example</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 
     <properties>
 
@@ -14,47 +14,45 @@
         <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
 
-        <webdriver.version>4.2.2</webdriver.version>
-        <cucumber.version>6.8.1</cucumber.version>
+        <springboot.version>2.6.4</springboot.version>
+        <webdriver.version>5.1.0</webdriver.version>
+        <cucumber.version>7.0.0</cucumber.version>
+        <selenium.version>4.1.2</selenium.version>
 
     </properties>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.4.RELEASE</version>
-        <relativePath />
-    </parent>
-
     <build>
         <plugins>
-
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
     <dependencies>
 
         <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>${webdriver.version}</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
+            <version>${springboot.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+            <version>${springboot.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
+            <version>${selenium.version}</version>
         </dependency>
 
         <dependency>
@@ -81,6 +79,13 @@
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-core</artifactId>
             <version>${cucumber.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>${webdriver.version}</version>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>
