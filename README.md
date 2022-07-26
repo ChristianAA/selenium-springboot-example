@@ -6,8 +6,8 @@ A simple search in DuckDuckGo to check that results are displayed is used as exa
 
 # Requirements
 
-* JDK 8
-* Maven 3.6
+* JDK 11
+* Maven 3.8.6
 
 # Test Execution
 
@@ -17,7 +17,14 @@ A simple search in DuckDuckGo to check that results are displayed is used as exa
 
 # Configuration
 
-By default, tests will be executed in Chrome (headless mode). Preferences can be changed in "application.properties" file
+By default, tests will be executed in Chrome (headless mode). 
+
+Preferences can be changed in "application.properties" file
+
+This values can also be defined from the command line when launching the tests without the need of
+modify the properties file.
+
+`mvn clean test -Dselenium.browser.headless=false`
 
 # Results
 

@@ -5,19 +5,19 @@
 
     <groupId>com.example.selenium</groupId>
     <artifactId>selenium-springboot-example</artifactId>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
 
     <properties>
 
-        <java.version>8</java.version>
+        <java.version>11</java.version>
         <encoding>UTF-8</encoding>
         <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
 
-        <springboot.version>2.6.4</springboot.version>
-        <webdriver.version>5.1.0</webdriver.version>
-        <cucumber.version>7.0.0</cucumber.version>
-        <selenium.version>4.1.2</selenium.version>
+        <springboot.version>2.7.1</springboot.version>
+        <webdriver.version>5.2.1</webdriver.version>
+        <cucumber.version>7.4.1</cucumber.version>
+        <selenium.version>4.3.0</selenium.version>
 
     </properties>
 
