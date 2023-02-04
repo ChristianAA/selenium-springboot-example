@@ -11,7 +11,6 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "html:results/cucumber-reports.html", "json:results/cucumber.json", "junit:results/cucumber.xml"},
         glue = "com.example.selenium",
         tags = "not @wip")
-
 public class TestRunner {
 
 }

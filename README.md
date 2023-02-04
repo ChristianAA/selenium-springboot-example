@@ -6,7 +6,7 @@ A simple search in DuckDuckGo to check that results are displayed is used as exa
 
 # Requirements
 
-* JDK 11
+* JDK 18
 * Maven 3.8.6
 
 # Test Execution
