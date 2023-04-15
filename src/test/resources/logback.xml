@@ -9,10 +9,8 @@
         </encoder>
     </appender>
 
-    <root level="warn">
+    <root level="info">
         <appender-ref ref="console" />
     </root>
-
-    <logger name="com.example.selenium" level="debug" />
     
 </configuration>
