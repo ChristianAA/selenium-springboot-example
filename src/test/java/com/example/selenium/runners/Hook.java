@@ -127,9 +127,10 @@ public class Hook {
 
         // Headless mode
         if (TRUE.equals(headless)) {
-            chromeOptions.addArguments("--headless");
+            chromeOptions.addArguments("--headless=new");
             chromeOptions.addArguments("--disable-gpu");
-            chromeOptions.addArguments("window-size=1920,1080");
+            chromeOptions.addArguments("--no-sandbox");
+            chromeOptions.addArguments("--window-size=1920,1080");
         }
 
         // Remote mode
