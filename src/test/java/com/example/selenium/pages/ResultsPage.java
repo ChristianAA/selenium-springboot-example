@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ResultsPage implements BasePage {
 
-    private static final String RESULTS_LOCATOR = "#links [data-testid='result']";
+    private static final String RESULTS_LOCATOR = "[data-testid='mainline'] [data-testid='result']";
 
     @Autowired
     private VisibilityHelper visibilityHelper;
