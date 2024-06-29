@@ -8,10 +8,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class SearchPage implements BasePage {
 
-    @FindBy(how = How.CSS, using = "#search_form_input_homepage")
+    @FindBy(how = How.CSS, using = "#searchbox_input")
     private WebElement searchInput;
 
-    @FindBy(how = How.CSS, using = "#search_button_homepage")
+    @FindBy(how = How.CSS, using = "#searchbox_homepage [type='submit']")
     private WebElement searchButton;
 
     public void inputSearch(String search){
