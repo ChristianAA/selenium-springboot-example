@@ -14,9 +14,10 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxBinary;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
@@ -49,6 +50,8 @@ public class Hook {
     private WebDriver driver;
 
     private WebDriverWait wait;
+
+    private String userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36";
 
     @PostConstruct
     public void initialize() {
@@ -131,6 +134,7 @@ public class Hook {
             chromeOptions.addArguments("--disable-gpu");
             chromeOptions.addArguments("--no-sandbox");
             chromeOptions.addArguments("--window-size=1920,1080");
+		    chromeOptions.addArguments("--user-agent=" + userAgent);
         }
 
         // Remote mode
@@ -149,11 +153,18 @@ public class Hook {
 
     private void setFirefoxDriver() {
         WebDriverManager.firefoxdriver().setup();
+
+        FirefoxProfile profile = new FirefoxProfile();
+        profile.setPreference("general.useragent.override", userAgent);
+
+        // Configurar opciones de Firefox
         FirefoxOptions firefoxOptions = new FirefoxOptions();
+        firefoxOptions.setProfile(profile);
+
         FirefoxBinary firefoxBinary = new FirefoxBinary();
 
         // Headless mode
-        if (TRUE.equals(headless)) {
+        if (Boolean.TRUE.equals(headless)) {
             firefoxBinary.addCommandLineOptions("--headless");
             firefoxOptions.addArguments("--width=1920");
             firefoxOptions.addArguments("--height=1080");
@@ -161,6 +172,7 @@ public class Hook {
 
         firefoxOptions.setBinary(firefoxBinary);
 
+        // Crear el driver
         driver = new FirefoxDriver(firefoxOptions);
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
