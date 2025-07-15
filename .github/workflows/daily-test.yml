@@ -20,7 +20,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Build project without tests
-        run: ./mvnw clean install -DskipTests
+        run: mvn clean install -DskipTests
 
       - name: Run tests
-        run: ./mvnw test
+        run: mvn test
