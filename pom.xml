@@ -5,7 +5,7 @@
 
     <groupId>com.example.selenium</groupId>
     <artifactId>selenium-springboot-example</artifactId>
-    <version>1.1.4</version>
+    <version>1.2.0</version>
 
     <properties>
 
@@ -17,8 +17,8 @@
         <maven.compiler.version>3.14.0</maven.compiler.version>
         <springboot.version>3.5.3</springboot.version>
         <webdriver.version>6.1.0</webdriver.version>
-        <cucumber.version>7.23.0</cucumber.version>
-        <selenium.version>4.33.0</selenium.version>
+        <cucumber.version>7.24.0</cucumber.version>
+        <selenium.version>4.34.0</selenium.version>
 
     </properties>
 
