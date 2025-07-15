@@ -1,8 +1,8 @@
-name: Daily Tests execution
+name: Daily Maven Tests
 
 on:
   schedule:
-    - cron: '0 6 * * *'
+    - cron: '0 6 * * *'  # every day at 6:00 AM UTC
   workflow_dispatch:
 
 jobs:
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Clone repo
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Setup Java 18
@@ -19,5 +19,8 @@ jobs:
           java-version: '18'
           distribution: 'temurin'
 
+      - name: Build project without tests
+        run: ./mvnw clean install -DskipTests
+
       - name: Run tests
-        run: mvn clean test
+        run: ./mvnw test
