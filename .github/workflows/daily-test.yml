@@ -19,8 +19,11 @@ jobs:
           java-version: '18'
           distribution: 'temurin'
 
+      - name: Setup Chrome
+        uses: browser-actions/setup-chrome@latest
+
       - name: Build project without tests
         run: mvn clean install -DskipTests
 
-      - name: Run tests
-        run: mvn test
+      - name: Run tests with Xvfb
+        run: xvfb-run mvn test
