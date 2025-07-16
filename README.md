@@ -1,3 +1,5 @@
+[![Daily Maven Tests](https://github.com/ChristianAA/selenium-springboot-example/actions/workflows/daily-test.yml/badge.svg?branch=master)](https://github.com/ChristianAA/selenium-springboot-example/actions/workflows/daily-test.yml)
+
 # Cucumber + Selenium + Spring Boot example
 
 This repository contains the base setup of an UI testing project, using Cucumber + Selenium (Page Factory Model) + Spring Boot
