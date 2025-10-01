@@ -28,3 +28,10 @@ jobs:
 
       - name: Run tests with Xvfb
         run: xvfb-run mvn test
+      
+      - name: Upload Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: html-report
+          path: results/cucumber-reports.html
