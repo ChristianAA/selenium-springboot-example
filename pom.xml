@@ -16,10 +16,10 @@
 
         <maven.compiler.version>3.14.0</maven.compiler.version>
         <maven.surefire.version>3.5.3</maven.surefire.version>
-        <springboot.version>3.5.3</springboot.version>
-        <webdriver.version>6.1.0</webdriver.version>
-        <cucumber.version>7.24.0</cucumber.version>
-        <selenium.version>4.34.0</selenium.version>
+        <springboot.version>3.5.16</springboot.version>
+        <webdriver.version>6.3.4</webdriver.version>
+        <cucumber.version>7.34.7</cucumber.version>
+        <selenium.version>4.47.0</selenium.version>
 
     </properties>
 
