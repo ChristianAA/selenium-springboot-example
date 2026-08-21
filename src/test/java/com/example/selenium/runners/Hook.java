@@ -16,7 +16,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -161,16 +160,12 @@ public class Hook {
         FirefoxOptions firefoxOptions = new FirefoxOptions();
         firefoxOptions.setProfile(profile);
 
-        FirefoxBinary firefoxBinary = new FirefoxBinary();
-
         // Headless mode
         if (Boolean.TRUE.equals(headless)) {
-            firefoxBinary.addCommandLineOptions("--headless");
+            firefoxOptions.addArguments("--headless");
             firefoxOptions.addArguments("--width=1920");
             firefoxOptions.addArguments("--height=1080");
         }
-
-        firefoxOptions.setBinary(firefoxBinary);
 
         // Crear el driver
         driver = new FirefoxDriver(firefoxOptions);
